@@ -45,7 +45,7 @@
     },
 
     typeMsg: function() {
-      $('#js-breaking-msg').text( Breaking.msg );
+      // ...
     },
 
     resetMsg: function() {
