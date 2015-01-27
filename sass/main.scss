@@ -30,6 +30,7 @@ a {
   height: 650px;
   margin: 0 auto;
   max-width: 1172px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -38,15 +39,20 @@ a {
   background-color: #000;
   position: absolute;
     right: 0; bottom: 0; left: 0;
+  transform: translateY(36px);
+  transition: transform 600ms cubic-bezier(1, 0, 0, 1);
   width: 100%;
   z-index: 10;
   -webkit-font-smoothing: antialiased;
 }
+.breaking--visible {
+  transform: translateY(0);
+  transition: transform 600ms cubic-bezier(1, 0, 0, 1);
+}
   .breaking__inner {
-    font-size: 15px;
-    height: 40px;
     margin: 0 auto;
-    max-width: 976px;
+    max-width: 992px;
+    padding: 0 16px;
     position: relative;
   }
     .breaking__label {
@@ -57,16 +63,20 @@ a {
       line-height: 1;
       margin-right: 6px;
       position: absolute;
-        top: 11px; left: 0;
+        top: 9px; left: 16px;
       padding: 3px 4px 2px;
+      transform: translateY(0);
       text-transform: uppercase;
       vertical-align: middle;
       z-index: 20;
     }
     .breaking__alert {
       padding-top: 10px;
+      padding-bottom: 9px;
 
       p {
+        font-size: 15px;
+        line-height: 17px;
         margin-top: 0;
         margin-right: 23px+8;
         margin-bottom: 0;
@@ -88,7 +98,8 @@ a {
       font-size: 25px;
       padding: 4px;
       position: absolute;
-        top: 6px; right: 0;
+        top: 4px; right: 16px;
+      transform: translateY(0);
       z-index: 20;
 
       &:hover {
