@@ -39,32 +39,43 @@ a {
     right: 0; bottom: 0; left: 0;
   width: 100%;
   z-index: 10;
-
-  p {
-    color: #FFF;
-  }
+  -webkit-font-smoothing: antialiased;
 }
   .breaking__inner {
+    @extend %clearfix;
+
+    color: #FFF;
+    font-size: 15px;
     height: 40px;
     margin: 0 auto;
     max-width: 976px;
+    position: relative;
   }
-  .breaking__label {
-    background-color: #CC0101;
-    display: inline-block;
-  }
-  .breaking__close {
-    color: #FFF;
-    display: block;
-    position: absolute;
-      right: 0;
-    z-index: 20;
-  }
+    .breaking__label {
+      background-color: #CC0101;
+      display: inline-block;
+      float: left;
+      font-weight: bold;
+      margin-right: 4px;
+      text-transform: uppercase;
+    }
+    .breaking__alert {
+      float: left;
+    }
+    .breaking__close {
+      color: #FFF;
+      display: block;
+      font-weight: bold;
+      font-size: 21px;
+      position: absolute;
+        top: 0; right: 0;
+      z-index: 20;
+    }
 
 // Utility
 //
 
-.clearfix {
+%clearfix {
 
   &:after {
     content: "";
