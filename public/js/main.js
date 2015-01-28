@@ -55,7 +55,7 @@
         $('#js-breaking-msg').text( typedText );
 
         if( typedText !== Breaking.msg ) {
-          setTimeout(type, 60);
+          setTimeout(type, 28);
         }
       }
     },
