@@ -45,7 +45,19 @@
     },
 
     typeMsg: function() {
-      // ...
+      var typedText = '';
+      var i = 0;
+
+      type();
+
+      function type() {
+        typedText = Breaking.msg.slice(0, ++i);
+        $('#js-breaking-msg').text( typedText );
+
+        if( typedText !== Breaking.msg ) {
+          setTimeout(type, 60);
+        }
+      }
     },
 
     resetMsg: function() {
